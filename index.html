@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer with Audio</title>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    <p id="message">Click the button below to hear your fate!</p>
+
+    <!-- Audio player -->
+    <audio id="background-audio" loop>
+        <source src="https://www.dropbox.com/scl/fi/y76pmi0fcv8h4zzj26fwa/Leo.mp3?raw=1" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Button to trigger audio -->
+    <button onclick="startAudio()">Click to Pray</button>
+
+    <script>
+        function startAudio() {
+            // Play the audio
+            document.getElementById('background-audio').play();
+
+            // Change the message
+            document.getElementById('message').innerHTML = "Your fate is sealed! Listen closely...";
+        }
+    </script>
+</body>
+</html>
+
